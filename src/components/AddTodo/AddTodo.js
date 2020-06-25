@@ -9,6 +9,11 @@ const AddTodo = (props) => {
     setTodo(event.target.value);
   }
 
+  const handlePersonAdded = () => {
+    props.personAdded(todo);
+    setTodo('');
+  }
+
   return (
     <div className="AddTodo">
       <input
@@ -17,7 +22,7 @@ const AddTodo = (props) => {
         onChange={todoChangeHandler}
         value={todo} />
 
-      <button onClick={() => props.personAdded(todo)}>Add Todo</button>
+      <button onClick={handlePersonAdded}>Add Todo</button>
     </div>
   );
 }

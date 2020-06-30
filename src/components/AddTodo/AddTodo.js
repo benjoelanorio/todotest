@@ -9,8 +9,8 @@ const AddTodo = (props) => {
     setTodo(event.target.value);
   }
 
-  const handlePersonAdded = () => {
-    props.personAdded(todo);
+  const hadleTodoAdded = () => {
+    props.todoAdded(todo);
     setTodo('');
   }
 
@@ -22,7 +22,7 @@ const AddTodo = (props) => {
         onChange={todoChangeHandler}
         value={todo} />
 
-      <button onClick={handlePersonAdded}>Add Todo</button>
+      <button onClick={hadleTodoAdded}>Add Todo</button>
     </div>
   );
 }

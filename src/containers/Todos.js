@@ -2,14 +2,16 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import Todo from '../components/Todo/Todo';
-import AddPerson from '../components/AddTodo/AddTodo';
+import AddTodo from '../components/AddTodo/AddTodo';
+
+
 
 import * as actionTypes from '../store/actions';
 
 const Todos = (props) => {
   return (
     <div>
-      <AddPerson personAdded={props.onAddedTodo} />
+      <AddTodo todoAdded={props.onAddedTodo} />
       {props.todoState.map((todo, index) => (
         <Todo
           key={todo.id}

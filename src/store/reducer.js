@@ -31,7 +31,6 @@ const reducer = (state = initialState, action) => {
 
       const index = action.todoData.index;
       return {
-        ...state,
         ...state.todos.splice(index, 1, updated),
         todos: state.todos.filter(todo => todo.id !== action.todoId)
       }

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Todo.css';
 
-import { Button, ListGroup, ListGroupItem } from 'react-bootstrap';
+import { Button, ListGroupItem } from 'react-bootstrap';
 
 const Todo = (props) => {
 
